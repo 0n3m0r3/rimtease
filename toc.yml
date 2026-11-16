@@ -1,0 +1,4 @@
+- name: Mods
+  href: index.md
+- name: Documentation
+  href: docs/

@@ -1,0 +1,10 @@
+AGENTS.md
+**/AGENTS.md
+.local/
+_site/
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+.env
+.env.*

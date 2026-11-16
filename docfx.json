@@ -1,0 +1,41 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "index.md",
+          "toc.yml",
+          "mods/**.md",
+          "mods/toc.yml",
+          "docs/**.md",
+          "docs/**/toc.yml"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "template": [
+      "default",
+      "modern",
+      "templates/rimtease"
+    ],
+    "globalMetadata": {
+      "_appName": "RimTease",
+      "_appTitle": "RimTease · Mods & documentation",
+      "_appLogoPath": "images/mark.svg",
+      "_appFaviconPath": "images/mark.svg",
+      "_appFooter": "RimTease · Catalogue & documentation · In development",
+      "_enableSearch": true,
+      "_disableContribution": true,
+      "_disableNewTab": true,
+      "_disableNextArticle": true,
+      "_lang": "en"
+    }
+  }
+}
