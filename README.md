@@ -25,7 +25,7 @@ Open <http://localhost:8093/rimtease/>. Keep the terminal running and stop the s
 - `toc.yml` files define navigation; `templates/rimtease/` owns the presentation.
 - `tools/` owns the static build, publication checks and local preview.
 
-The home page addresses players and clearly marks RimTease as intended for adults. Use brief descriptions and useful illustrations; keep detailed contributor constraints in expandable sections. Label concept artwork and diagrams so they cannot be mistaken for game captures. The current redesign covers the home page, guide entry and Themes artist brief; the other detailed pages still need editorial review.
+The home page is a searchable mod catalogue. Illustrated mod details open in place, with dependencies and a demonstration install order. A single catalogue banner identifies mock images and unavailable downloads. The demo dependency graph is Body → RimWeave; Themes → RimWeave + Body; RimTease → RimWeave + Body, with Themes optional. These are demonstration choices, not a released package manifest. Keep player copy short and put contribution briefs under For creators.
 
 When a feature changes, update its catalogue description and relevant guide or visual brief together. Describe planned, available and verified behaviour separately. A feature's release, dependency or compatibility claim needs evidence from that mod's actual version.
 
