@@ -30,7 +30,7 @@ That separation is the purpose of Body.
 | --- | --- |
 | Anatomical state, medical targets and conditions for native functions | Body |
 | Preferences, reactions and activity rules | RimTease core |
-| The visual representation of the body and clothes | Themes |
+| The visual representation of the body and clothes | [Themes](themes.md) |
 | Reusable technical contracts | RimWeave Framework |
 
 A size category does not add a health, damage or attraction bonus by default. Native systems still own their calculations. Rendering can be optional without making the underlying anatomy optional.

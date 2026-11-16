@@ -9,7 +9,7 @@ description: Medical visuals, interfaces and attachment test aids for RimTease B
 
 <p class="rt-page-lead">A clear purpose for every visual.</p>
 
-Start with the category you want to help with. Each need belongs to Body unless another owner is named. On-map body appearance and clothing adaptation belong to Themes; they use Body's state.
+Start with the category you want to help with. Each need belongs to Body unless another owner is named. On-map body appearance and clothing adaptation belong to [Themes](themes.md); they use Body's state.
 
 <div class="rt-status"><strong>Planning inventory</strong><span>Artwork and in-game integration are not verified by this page.</span></div>
 
@@ -73,9 +73,7 @@ Selection may use a contextual list. Tiny clickable regions on the pawn image ar
 
 ## Guide illustrations
 
-Explanatory diagrams and annotated screenshots belong to the documentation. Potential Body examples include size settings, surgical choices, the medical atlas and preparation for removal.
-
-These are optional editorial needs. Capture actual interfaces only after the relevant feature works, and record the tested versions. Share a useful resource across guides instead of creating duplicate commissions. A mockup is not evidence of a working game feature.
+[Explanatory diagrams and annotated screenshots](index.md#shared-documentation-resources) belong to the documentation. Potential Body examples include size settings, surgical choices, the medical atlas and preparation for removal. Keep their shared brief and source in one place.
 
 ## Before starting artwork
 
@@ -84,4 +82,4 @@ These are optional editorial needs. Capture actual interfaces only after the rel
 3. Record the source, author and permission to use each resource.
 4. Keep concept previews, final artwork and in-game verification distinct.
 
-[About RimTease Body](../../mods/body.md) · [Documentation home](../index.md)
+[About RimTease Body](../../mods/body.md) · [All visual requirements](index.md)

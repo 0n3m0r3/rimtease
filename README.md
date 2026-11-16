@@ -1,6 +1,6 @@
 # RimTease — Mods & documentation
 
-The English catalogue and player documentation for RimTease. This first local preview contains the mod catalogue, the Body overview, the documentation home, Body visual requirements and the Health Display brief.
+The English catalogue and player documentation for RimTease. The preview contains the mod catalogue, Body and Themes overviews, the documentation home, visual requirements grouped by mod, shared documentation resources and the Health Display brief.
 
 The site uses [DocFX](https://dotnet.github.io/docfx/) 2.81.0 with a custom theme. It requires no game installation or backend. The game projects and [RimWeave API documentation](https://github.com/0n3m0r3/rimweave-docs) remain separate.
 
@@ -20,14 +20,14 @@ Open <http://localhost:8093/rimtease/>. Keep the terminal running and stop the s
 
 ## Content and maintenance
 
-- `index.md` owns the catalogue; `mods/body.md` owns Body's description.
+- `index.md` owns the catalogue; `mods/` owns the detailed Body and Themes descriptions.
 - `docs/` owns player guidance and contribution briefs, organized by mod and category.
 - `toc.yml` files define navigation; `templates/rimtease/` owns the presentation.
 - `tools/` owns the static build, publication checks and local preview.
 
 When a feature changes, update its catalogue description and relevant guide or visual brief together. Describe planned, available and verified behaviour separately. A feature's release, dependency or compatibility claim needs evidence from that mod's actual version.
 
-The build treats warnings as errors, checks internal links and anchors, requires all five content pages in search, and rejects private references and game binaries from the generated site. The pinned search adapter fails explicitly when an upstream asset changes. Browser review additionally covers navigation, search, keyboard interaction, mobile layout and theme contrast.
+The build treats warnings as errors, checks internal links and anchors, requires every listed content page in search, and rejects private references and game binaries from the generated site. The pinned search adapter fails explicitly when an upstream asset changes. Browser review additionally covers navigation, search, keyboard interaction, mobile layout and theme contrast.
 
 ## Delivery
 

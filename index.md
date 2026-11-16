@@ -36,12 +36,12 @@ _disableBreadcrumb: true
 </div>
 <div class="rt-mod-row">
 <div class="rt-mod-number">03</div><div class="rt-mod-name"><span class="rt-tag">Appearance · Planned</span><h3>Themes</h3></div>
-<div class="rt-mod-summary"><p>Optional body and clothing presentation, with shared conventions for visual themes. Rendering follows the actual anatomy without changing its functions.</p><p class="rt-small">Body rendering and clothing adaptation still need a verified prototype.</p></div>
+<div class="rt-mod-summary"><p>Optional body and clothing presentation, with shared conventions for visual themes. Rendering follows the actual anatomy without changing its functions.</p><p class="rt-small">Body rendering and clothing adaptation still need a verified prototype.</p><div class="rt-inline-links"><a href="mods/themes.md">Explore Themes <span aria-hidden="true">→</span></a><a href="docs/visuals/themes.md">See visual requirements</a></div></div>
 </div>
 </section>
 
 <div class="rt-bottom-grid">
-<section class="rt-note"><p class="rt-eyebrow">For contributors</p><h2>Find a place to start.</h2><p>Browse visual needs by mod, then category. Each brief explains the purpose, possible reuse and decisions still open.</p><a href="docs/visuals/body.md">Browse Body's visual needs <span aria-hidden="true">→</span></a></section>
+<section class="rt-note"><p class="rt-eyebrow">For contributors</p><h2>Find a place to start.</h2><p>Browse visual needs by mod, then category. Each brief explains the purpose, possible reuse and decisions still open.</p><a href="docs/visuals/index.md">Browse visual requirements <span aria-hidden="true">→</span></a></section>
 <section class="rt-note"><p class="rt-eyebrow">The technical foundation</p><h2>Built around clear boundaries.</h2><p>RimWeave is a separate, neutral framework for mod authors. Its API documentation has its own home.</p><a href="https://github.com/0n3m0r3/rimweave-docs">RimWeave developer documentation <span aria-hidden="true">↗</span></a></section>
 </div>
 

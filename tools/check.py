@@ -28,8 +28,9 @@ class Page(HTMLParser):
 
 def check():
     pages = {p.resolve(): Page(p.read_text()) for p in SITE.rglob("*.html")}
-    required = ("index.html", "mods/body.html", "docs/index.html",
-                "docs/visuals/body.html", "docs/visuals/health-display.html")
+    required = ("index.html", "mods/body.html", "mods/themes.html", "docs/index.html",
+                "docs/visuals/index.html", "docs/visuals/body.html",
+                "docs/visuals/health-display.html", "docs/visuals/themes.html")
     errors = [f"Missing page: {name}" for name in required if (SITE / name) not in pages]
     index = SITE / "index.json"
     if not index.is_file():
@@ -70,7 +71,7 @@ def check():
                 errors.append(f"Private reference in output: {path.relative_to(SITE)}")
     if errors:
         raise SystemExit("\n".join(errors[:40]))
-    print(f"Checked {len(pages)} HTML pages, {checked} local links and all five search entries; public-output boundaries passed.")
+    print(f"Checked {len(pages)} HTML pages, {checked} local links and all {len(required)} required search entries; public-output boundaries passed.")
 
 if __name__ == "__main__":
     check()
