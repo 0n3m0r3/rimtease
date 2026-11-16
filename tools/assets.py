@@ -2,6 +2,7 @@
 import hashlib
 from pathlib import Path
 import re
+import shutil
 from urllib.parse import urlsplit, urlunsplit
 
 
@@ -16,7 +17,8 @@ def version_assets(site: Path):
                 digest.update(path.read_bytes())
                 digest.update(b"\0")
         names[name] = f"{name}-{digest.hexdigest()[:16]}"
-        folder.rename(site / names[name])
+        # Keep the unversioned paths usable by HTML cached before this deployment.
+        shutil.copytree(folder, site / names[name])
 
     def rewrite(match):
         url = urlsplit(match["url"])

@@ -36,7 +36,9 @@ class AssetPublicationTests(unittest.TestCase):
             nested = (root / "changed/docs/page.html").read_text()
             self.assertIn(f'src="../{changed}/entry.js"', nested)
             self.assertTrue((root / "changed" / changed / "main.js").is_file())
-            self.assertFalse((root / "changed/public").exists())
+            self.assertEqual((root / "changed/public/main.css").read_text(),
+                             (root / "changed" / changed / "main.css").read_text())
+            self.assertTrue((root / "changed/images/mark.svg").is_file())
 
 
 if __name__ == "__main__":
