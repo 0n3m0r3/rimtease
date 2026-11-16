@@ -1,80 +1,76 @@
 ---
-title: Themes visual requirements
-description: Body appearance, clothing adaptation and renderer comparison captures for RimTease Themes.
+title: Themes artist brief
+description: The body layers, clothing work and comparison captures needed for a RimTease theme.
 ---
 
-<p class="rt-eyebrow">Documentation / Visual requirements / Themes</p>
+<p class="rt-eyebrow">For creators / Themes</p>
 
-# Themes visual requirements
+# Make a theme
 
-<p class="rt-page-lead">Change the presentation.<br>Keep the character's state.</p>
+<p class="rt-page-lead">The body, the clothes, and the checks that bring them together.</p>
 
-Imagine comparing the same clothed character with the renderer disabled and enabled. These needs describe the body layers, clothing treatment and comparison evidence required for that planned presentation. Themes reads Body's actual state; anatomy, medical rules and protection keep their own owners.
+<div class="rt-status"><strong>Planning brief</strong><span>The renderer is not ready. File formats, sizes and final asset counts are still undecided.</span></div>
 
-<div class="rt-status"><strong>Planning inventory</strong><span>Art briefs and the renderer prototype remain to be defined. No in-game result is verified here.</span></div>
+<div class="rt-category-links"><a href="#bodies-and-anatomical-variants">Body layers</a><a href="#clothing-and-masks">Clothing</a><a href="#validation-captures">Comparison captures</a></div>
 
-<div class="rt-category-links"><a href="#bodies-and-anatomical-variants">Bodies & anatomical variants</a><a href="#clothing-and-masks">Clothing & masks</a><a href="#validation-captures">Validation captures</a><a href="#shared-resources">Shared resources</a></div>
+<h2 id="bodies-and-anatomical-variants">Body layers</h2>
 
-## Bodies and anatomical variants
+<div class="rt-asset-row">
+<figure><img src="../../images/theme-body.svg" width="420" height="240" alt="A body outline keeps its head while its torso changes width."><figcaption>Diagram: change the supported region.</figcaption></figure>
+<div><p>Show the external parts the character actually has, on the correct side and at the supported size. Reuse existing head and accessory layers where possible.</p><p><strong>Decide first:</strong> art style, initial body profiles, size categories and the states that need their own drawing.</p></div>
+</div>
 
-### Body appearance
-
-<span class="rt-label">Required for the planned renderer · Art brief pending</span>
-
-Represent the external structures actually present, their side and supported size categories. A missing or replaced part must follow Body's state. Internal medical organs belong in the medical diagram; their existence does not automatically require an on-map graphic.
-
-**Owner:** Themes, using Body data.\
-**Variants to define:** initial silhouettes and profiles, supported size categories, sides, absent or replacement states, and the views the renderer supports.\
-**Possible reuse:** valid native or third-party body, head and accessory layers, with their source and reuse rights checked.\
-**Decisions still open:** visual style, drawn versus generated variants, regions, anchors, masks, file specifications and the first supported configurations.
-
-An incomplete theme needs a usable fallback. If two providers represent the same element, the selection or resolution must be explicit. No sprite count or universal body-profile support is established by this inventory.
+<details>
+<summary>Body mapping and fallback rules</summary>
+<ul>
+<li>Body owns anatomy. Themes draws it; changing the theme must not create a part or repeat an operation.</li>
+<li>Regions, attachment points, masks and drawn versus generated variants still need agreement.</li>
+<li>Missing artwork needs a usable fallback. Competing providers need an explicit selection.</li>
+<li>Internal organs belong in the medical diagram, not automatically on the map.</li>
+</ul>
+</details>
 
 ## Clothing and masks
 
-### Clothing adaptation
+<div class="rt-asset-row">
+<figure><img src="../../images/theme-clothing.svg" width="420" height="240" alt="Body and clothing layers combine into one dressed character."><figcaption>Diagram: body and clothes stay aligned.</figcaption></figure>
+<div><h3>Adapt existing outfits</h3><p>The first prototype should reshape the bust locally using existing clothing images. A dedicated variant can replace that result when needed.</p><p><strong>Prototype first:</strong> choose a small wardrobe and establish what needs an override before drawing a variant for every size.</p></div>
+</div>
 
-<span class="rt-label">Existing images preferred · Automatic adaptation unverified</span>
-
-The planned automatic path adapts the relevant upper-body layers locally while preserving the head, limbs and unrelated accessories. It aims to support ordinary clothing across size categories without commissioning one texture per garment and size.
-
-**Owner:** Themes for appearance; Body and native systems retain functional coverage and protection.\
-**Cases to cover:** soft and rigid garments, multiple layers, ordinary third-party clothing, unusual openings, dedicated variants and unsupported renderers.\
-**Possible reuse:** existing clothing images and a supplied variant when the automatic path is unsuitable. A dedicated variant must not be deformed twice.\
-**Decisions still open:** prototype feasibility, pilot wardrobe, supported categories, mask conventions, fallback rules and the conditions for selecting an override.
-
-A mask may hide a layer without changing protection. A garment may remain wearable even when its original image is the only usable fallback. Do not commission replacements for an entire wardrobe before the prototype establishes what can be reused.
+<details>
+<summary>Clothing cases to cover</summary>
+<ul>
+<li>Check soft and rigid garments, multiple layers, ordinary third-party clothes, unusual openings and custom renderers.</li>
+<li>Keep the head, limbs, hem and unrelated accessories unchanged. Never apply the adaptation twice to a supplied variant.</li>
+<li>Define masks, override selection and the fallback to the original image. An imperfect fit must not prevent wearing the item.</li>
+<li>Body and native systems own coverage and protection. A graphical mask changes only what is drawn.</li>
+</ul>
+</details>
 
 ## Validation captures
 
-### Renderer comparison captures
+<div class="rt-asset-row">
+<figure><img src="../../images/theme-checks.svg" width="420" height="240" alt="A comparison sheet shows four directions and a portrait, with rendering off and on."><figcaption>Capture plan: four directions + portrait.</figcaption></figure>
+<div><h3>Show the same pawn before and after</h3><p>Capture rendering off and on, every supported size, all four directions and the portrait. Include native and third-party outfits, an override and a fallback.</p><p><strong>Record:</strong> game and mod versions, tested outfits and visible defects. These captures require a working prototype.</p></div>
+</div>
 
-<span class="rt-label">Required prototype evidence · Not yet captured</span>
-
-Show whether the planned renderer preserves contours, clothing alignment and unrelated body regions. These are captures of a working prototype, not a request for illustrative artwork.
-
-**Owner:** Themes, with Body review.\
-**Required comparisons:** rendering disabled and enabled, supported categories, all four orientations and the portrait in the same versioned scene. Include native and ordinary third-party clothing, multiple layers, soft and rigid garments, a dedicated override and a fallback.\
-**Possible reuse:** one suitable comparison capture may also illustrate a player guide; keep a single source and identify the context.\
-**Decisions still open:** the representative scene, wardrobe, supported configurations and capture procedure.
-
-Review contours, stretching, layer alignment, accessories and the result of toggling the renderer. Record the game and mod versions and which cases passed or failed. Graphics-cost measurements are separate evidence; still images alone cannot establish performance or prove that simulation state is unchanged.
-
-Successful examples cover only the configurations actually checked. Save/load, theme removal and simulation-preservation checks remain separate obligations.
+<details>
+<summary>What the comparison must establish</summary>
+<ul>
+<li>Inspect contours, stretching, clothing alignment and accessories in the same scene.</li>
+<li>Include soft and rigid garments and multiple layers. Successful outfits establish only their own tested coverage.</li>
+<li>Measure graphics cost separately. Screenshots cannot prove performance or unchanged simulation.</li>
+<li>Check save/load, switching themes, disabling rendering and removing a theme separately.</li>
+<li>Keep concept illustrations, finished assets and game captures clearly labelled.</li>
+</ul>
+</details>
 
 ## Shared resources
 
-| Related need | Existing owner and brief |
-| --- | --- |
-| Internal parts, sides and medical states in a medical diagram | Body's [Health Display integration](health-display.md) |
-| An observable target for an attachment | Body's [attachment test marker](body.md#attachments-and-test-aids), with Themes for presentation |
-| Explanations of anatomy, coverage and appearance | [Shared documentation diagrams](index.md#explanatory-diagrams) |
-| Rendering settings and theme-comparison illustrations | [Shared guide screenshots](index.md#guide-screenshots); reuse a suitable prototype comparison |
+Use the existing briefs for [medical diagrams](health-display.md), [attachment markers](body.md#attachments-and-test-aids) and [guide illustrations](index.md#shared-documentation-resources). Reuse a suitable comparison capture in a guide.
 
-Activity animations and specialist equipment belong with their selected consumer or content provider. This inventory does not create a second animation or accessory catalogue.
+The mod or pack providing an activity owns its animations and specialist props. This brief does not commission an animation library.
 
-## Before starting artwork
+Before using an asset, record its source, author and reuse permission.
 
-Confirm the feature, owner, supported variants and opportunity for reuse first. Dimensions, formats, naming and quantities follow the chosen integration. Record each resource's source, author and usage rights, and keep concept previews, final artwork and in-game verification distinct.
-
-[About RimTease Themes](../../mods/themes.md) · [All visual requirements](index.md)
+[About Themes](../../mods/themes.md) · [All visual briefs](index.md)

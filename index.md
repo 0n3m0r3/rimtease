@@ -1,48 +1,50 @@
 ---
-title: Mods
-description: Explore RimTease's gameplay, anatomy and visual projects.
+title: RimTease
+description: Intimacy, anatomy and personal choice for your RimWorld colony. For adults.
 _layout: landing
 _disableToc: true
 _disableAffix: true
 _disableBreadcrumb: true
 ---
 
-<div class="rt-hero">
-<div class="rt-hero-copy">
-<p class="rt-eyebrow">RimWorld 1.7 · A suite in development</p>
-<h1>A colony of<br>possibilities.</h1>
-<p class="rt-lead">Intimate lives, individual bodies and a look of your own. Get to know the RimTease projects, what each one does, and where you can help.</p>
-<div class="rt-actions"><a class="rt-button rt-primary" href="#the-mods">Explore the mods <span aria-hidden="true">↘</span></a><a class="rt-text-link" href="docs/index.md">Read the documentation <span aria-hidden="true">→</span></a></div>
+<div class="rt-cover">
+<img class="rt-cover-art" src="images/colony-evening.png" width="1774" height="887" alt="Two adult colonists share a quiet moment outside a lamplit home." fetchpriority="high">
+<div class="rt-cover-copy">
+<p class="rt-kicker">A mod suite for RimWorld <span class="rt-age">18+</span></p>
+<h1>Rim<span>Tease</span></h1>
+<p class="rt-cover-title">Life on the rim gets personal.</p>
+<p>Desire, intimate lives and changing bodies. A new side of colony life, shaped by your colonists and the choices you make.</p>
+<a class="rt-button rt-primary" href="#the-mods">Discover the mods</a>
 </div>
-<div class="rt-system" aria-label="Three distinct responsibilities: gameplay, anatomy and appearance">
-<p class="rt-eyebrow">One colony. Distinct responsibilities.</p>
-<div class="rt-system-line"><span class="rt-dot rt-core-dot"></span><div><span class="rt-system-label">RimTease</span><strong>The way they live.</strong></div><span class="rt-system-number">01</span></div>
-<div class="rt-system-line"><span class="rt-dot rt-body-dot"></span><div><span class="rt-system-label">Body</span><strong>The body they have.</strong></div><span class="rt-system-number">02</span></div>
-<div class="rt-system-line"><span class="rt-dot rt-themes-dot"></span><div><span class="rt-system-label">Themes</span><strong>The way it looks.</strong></div><span class="rt-system-number">03</span></div>
-<p class="rt-system-note">Changing the presentation should not change the simulation.</p>
-</div>
+<span class="rt-art-caption">Concept illustration</span>
 </div>
 
-<section class="rt-catalogue" aria-labelledby="the-mods">
-<div class="rt-section-heading"><div><p class="rt-eyebrow">The catalogue</p><h2 id="the-mods">Meet the mods.</h2></div><p>Three projects, each with a clear role.<br>The descriptions below cover planned behaviour.</p></div>
+<div class="rt-release-strip" id="availability"><span class="rt-state-dot" aria-hidden="true"></span><strong>In development</strong><span>The features below are planned. No playable release is available yet.</span></div>
 
-<div class="rt-mod-row">
-<div class="rt-mod-number">01</div><div class="rt-mod-name"><span class="rt-tag">Gameplay · Planned</span><h3>RimTease</h3></div>
-<div class="rt-mod-summary"><p>Intimate life and social dynamics for adult characters. Player policies, preferences, reactions and direct commands shape life in the colony.</p><p class="rt-small">The core owns gameplay rules. Detailed player guides will follow verified features.</p></div>
+<section class="rt-intro" aria-labelledby="your-colony">
+<div><p class="rt-kicker">More than survival</p><h2 id="your-colony">Desires. Bodies.<br>Consequences.</h2></div>
+<div><p>Who catches a colonist's eye? What happens behind closed doors? How does a new body change their life?</p><p>RimTease brings sexuality and intimate life into the colony, alongside its everyday stories. Set the rules, leave room for individual preferences, and choose how much you want to show.</p><p class="rt-audience"><strong>For adults.</strong> RimTease explores sexuality and other mature themes.</p></div>
+</section>
+
+<section class="rt-mods" aria-labelledby="the-mods">
+<div class="rt-section-heading"><h2 id="the-mods">Meet the mods</h2><span>Three parts of the same world</span></div>
+<div class="rt-mod-entry rt-core">
+<div class="rt-mod-emblem" aria-hidden="true"><svg viewBox="0 0 100 90"><path d="M50 73C36 61 17 49 17 31a18 18 0 0 1 33-10 18 18 0 0 1 33 10c0 18-19 30-33 42Z" fill="none" stroke="currentColor" stroke-width="5"/><path d="M14 79 27 67m47-54 10-8" stroke="currentColor" stroke-width="4"/></svg></div>
+<div><p class="rt-kicker">Intimate life</p><h3>RimTease</h3><p>Preferences, social reactions and intimate activities. Shape life in the colony through policies and direct choices, while your colonists keep desires of their own.</p><details><summary>What is planned?</summary><p>Individual preferences and traits, rules for places and participants, and explanations when a colonist accepts or refuses an activity. The activity list is still being designed.</p></details></div>
 </div>
-<div class="rt-mod-row rt-featured">
-<div class="rt-mod-number">02</div><div class="rt-mod-name"><span class="rt-tag">Anatomy · Planned</span><h3>Body</h3></div>
-<div class="rt-mod-summary"><p>Anatomy, body categories and medical choices that connect to RimWorld's existing systems. Individual parts remain distinct from their appearance.</p><div class="rt-inline-links"><a href="mods/body.md">Explore Body <span aria-hidden="true">→</span></a><a href="docs/visuals/body.md">See visual requirements</a></div></div>
+<div class="rt-mod-entry rt-body">
+<div class="rt-mod-emblem" aria-hidden="true"><svg viewBox="0 0 100 90"><path d="M37 13h26v23h23v25H63v23H37V61H14V36h23Z" fill="none" stroke="currentColor" stroke-width="5"/><path d="M28 49h17l6-10 7 20 5-10h10" fill="none" stroke="currentColor" stroke-width="3"/></svg></div>
+<div><p class="rt-kicker">Anatomy & medicine</p><h3>Body</h3><p>Individual anatomy, size choices and medical changes. Grafts, replacements and cosmetic operations connect to RimWorld's health system.</p><a href="mods/body.md">Explore Body</a></div>
 </div>
-<div class="rt-mod-row">
-<div class="rt-mod-number">03</div><div class="rt-mod-name"><span class="rt-tag">Appearance · Planned</span><h3>Themes</h3></div>
-<div class="rt-mod-summary"><p>Optional body and clothing presentation, with shared conventions for visual themes. Rendering follows the actual anatomy without changing its functions.</p><p class="rt-small">Body rendering and clothing adaptation still need a verified prototype.</p><div class="rt-inline-links"><a href="mods/themes.md">Explore Themes <span aria-hidden="true">→</span></a><a href="docs/visuals/themes.md">See visual requirements</a></div></div>
+<div class="rt-mod-entry rt-themes">
+<div class="rt-mod-emblem" aria-hidden="true"><svg viewBox="0 0 100 90"><path d="m50 9 38 21-38 21L12 30Z" fill="none" stroke="currentColor" stroke-width="5"/><path d="m12 47 38 21 38-21M12 64l38 21 38-21" fill="none" stroke="currentColor" stroke-width="5"/></svg></div>
+<div><p class="rt-kicker">Appearance</p><h3>Themes</h3><p>A look that follows the body, with matching clothes and optional anatomical rendering. Change the presentation while keeping the same character underneath.</p><a href="mods/themes.md">Explore Themes</a></div>
 </div>
 </section>
 
 <div class="rt-bottom-grid">
-<section class="rt-note"><p class="rt-eyebrow">For contributors</p><h2>Find a place to start.</h2><p>Browse visual needs by mod, then category. Each brief explains the purpose, possible reuse and decisions still open.</p><a href="docs/visuals/index.md">Browse visual requirements <span aria-hidden="true">→</span></a></section>
-<section class="rt-note"><p class="rt-eyebrow">The technical foundation</p><h2>Built around clear boundaries.</h2><p>RimWeave is a separate, neutral framework for mod authors. Its API documentation has its own home.</p><a href="https://github.com/0n3m0r3/rimweave-docs">RimWeave developer documentation <span aria-hidden="true">↗</span></a></section>
+<section class="rt-note"><h2>Get to know RimTease</h2><p>Find out what each mod does and which features are still being built.</p><a href="docs/index.md">Open the guide</a></section>
+<section class="rt-note"><h2>Want to make a theme?</h2><p>See the body layers, clothing work and reference captures a theme will need.</p><a href="docs/visuals/themes.md">View the artist brief</a></section>
 </div>
 
-<p class="rt-availability"><strong>Current availability:</strong> this is a documentation preview. No RimTease release or download is announced here. Installation instructions will accompany verified distributions.</p>
+<p class="rt-footer-note">Mod author? Visit the <a href="https://0n3m0r3.github.io/rimweave-docs/">RimWeave developer documentation</a>.</p>

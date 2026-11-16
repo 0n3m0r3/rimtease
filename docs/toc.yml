@@ -1,6 +1,6 @@
-- name: Start here
+- name: Player guide
   href: index.md
-- name: Visual requirements
+- name: Visual briefs
   href: visuals/index.md
   items:
     - name: RimTease Body

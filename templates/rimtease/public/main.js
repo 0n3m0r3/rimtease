@@ -1,5 +1,5 @@
 export default {
-  defaultTheme: "light",
+  defaultTheme: "dark",
   start() {
     document.querySelector(".navbar-brand")?.insertAdjacentHTML(
       "beforeend", '<span class="rt-nav-status">In development</span>');

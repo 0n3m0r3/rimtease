@@ -1,36 +1,27 @@
 ---
-title: Documentation
-description: Find player guidance and contribution briefs by mod.
+title: RimTease guide
+description: Understand the mods, find a guide or contribute artwork.
 ---
 
-<p class="rt-eyebrow">Guides & contribution</p>
+<p class="rt-eyebrow">Player guide</p>
 
-# Find your way.
+# Find your way
 
-<p class="rt-page-lead">Understand a mod. Follow a guide.<br>Help build what is missing.</p>
+Start with the mod you want to know about.
 
-This documentation preview covers Body and Themes, their roles and their visual requirements. Player installation and usage guides will accompany verified features and distributions.
+| Mod | What it covers |
+| --- | --- |
+| [Body](../mods/body.md) | Anatomy, size choices and medical changes |
+| [Themes](../mods/themes.md) | Body appearance and clothing |
 
-<div class="rt-doc-path">
-<span class="rt-detail-number">01 / Understand</span><div><h2>Start with the mod</h2><p>Learn what Body and Themes each own, how they relate, and what is still planned.</p><div class="rt-inline-links"><a href="../mods/body.md">Read the Body overview <span aria-hidden="true">→</span></a><a href="../mods/themes.md">Read the Themes overview <span aria-hidden="true">→</span></a></div></div>
-</div>
-<div class="rt-doc-path">
-<span class="rt-detail-number">02 / Contribute</span><div><h2>Find a visual need</h2><p>Choose a mod, then a category: medical diagrams, body appearance, clothing or validation captures. The briefs distinguish required representation, optional artwork and possible reuse.</p><a href="visuals/index.md">Browse visual requirements <span aria-hidden="true">→</span></a></div>
-</div>
-<div class="rt-doc-path">
-<span class="rt-detail-number">03 / Explore a brief</span><div><h2>The medical diagram</h2><p>See the purpose of the Health Display integration, the states it must distinguish and the decisions needed before production.</p><a href="visuals/health-display.md">Read the Health Display brief <span aria-hidden="true">→</span></a></div>
-</div>
+RimTease is in development. Installation and play guides will follow a playable release.
 
-## Installation, updates and removal
+## For artists and mod authors
 
-These procedures depend on actual packages and verified behaviour. No RimTease distribution is offered in this preview, so there is no executable installation or removal guide yet.
+Choose a mod in the [visual brief index](visuals/index.md), or go straight to:
 
-## Compatibility and help
+- [Making a theme](visuals/themes.md)
+- [Health Display integration](visuals/health-display.md)
+- [RimWeave developer documentation](https://0n3m0r3.github.io/rimweave-docs/)
 
-A planned integration is not a compatibility guarantee. Future support information will identify the game, mod and DLC versions tested, the result and any remaining limits.
-
-## For mod authors
-
-RimWeave's API and integration guidance remain in its [separate developer documentation repository](https://github.com/0n3m0r3/rimweave-docs).
-
-[Explore the mod catalogue](../index.md#the-mods)
+[Back to RimTease](../index.md)

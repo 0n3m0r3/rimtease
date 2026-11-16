@@ -2,7 +2,7 @@
 
 The English catalogue and player documentation for RimTease. The preview contains the mod catalogue, Body and Themes overviews, the documentation home, visual requirements grouped by mod, shared documentation resources and the Health Display brief.
 
-The site uses [DocFX](https://dotnet.github.io/docfx/) 2.81.0 with a custom theme. It requires no game installation or backend. The game projects and [RimWeave API documentation](https://github.com/0n3m0r3/rimweave-docs) remain separate.
+The site uses [DocFX](https://dotnet.github.io/docfx/) 2.81.0 with a custom theme. It requires no game installation or backend. The game projects and [RimWeave API documentation](https://0n3m0r3.github.io/rimweave-docs/) remain separate.
 
 ## Build and preview
 
@@ -24,6 +24,8 @@ Open <http://localhost:8093/rimtease/>. Keep the terminal running and stop the s
 - `docs/` owns player guidance and contribution briefs, organized by mod and category.
 - `toc.yml` files define navigation; `templates/rimtease/` owns the presentation.
 - `tools/` owns the static build, publication checks and local preview.
+
+The home page addresses players and clearly marks RimTease as intended for adults. Use brief descriptions and useful illustrations; keep detailed contributor constraints in expandable sections. Label concept artwork and diagrams so they cannot be mistaken for game captures. The current redesign covers the home page, guide entry and Themes artist brief; the other detailed pages still need editorial review.
 
 When a feature changes, update its catalogue description and relevant guide or visual brief together. Describe planned, available and verified behaviour separately. A feature's release, dependency or compatibility claim needs evidence from that mod's actual version.
 
