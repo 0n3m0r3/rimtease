@@ -31,6 +31,10 @@ def adapt_search(root: Path):
     worker = replace_once(worker, "let{index:e,data:r}=await n();", separator + ";let{index:e,data:r}=await n();")
     worker = 'import { searchText } from "./search-text.js";\n' + worker
 
+    # Keep the worker beside its module when the asset directory is versioned.
+    ui = replace_once(ui, 'm+"public/search-worker.min.js"',
+                      'new URL("./search-worker.min.js",import.meta.url)')
+
     # Pass literal text; the worker constructs required clauses after filtering.
     ui = replace_once(ui, "i=s.value,", "i=s.value.trim(),")
     ui = replace_once(ui, 's.value===""', 's.value.trim()===""')

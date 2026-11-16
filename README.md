@@ -29,6 +29,8 @@ The home page addresses players and clearly marks RimTease as intended for adult
 
 When a feature changes, update its catalogue description and relevant guide or visual brief together. Describe planned, available and verified behaviour separately. A feature's release, dependency or compatibility claim needs evidence from that mod's actual version.
 
+The build versions asset directories by content so returning visitors receive updated styles, scripts and images. Run `python3 -m unittest discover -s tools -p "test_*.py"` to check URL stability and invalidation between publications.
+
 The build treats warnings as errors, checks internal links and anchors, requires every listed content page in search, and rejects private references and game binaries from the generated site. The pinned search adapter fails explicitly when an upstream asset changes. Browser review additionally covers navigation, search, keyboard interaction, mobile layout and theme contrast.
 
 ## Delivery
