@@ -2,93 +2,80 @@ export function matchesMod(mod, query, category, dependency) {
   const terms = query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
   return terms.every(term => mod.search.toLocaleLowerCase().includes(term))
     && (!category || mod.category === category)
-    && (!dependency || (mod.requiresBody === "true") === (dependency === "body"));
+    && (!dependency || mod.dependencies.split(" ").includes(dependency));
 }
 
 export function initCatalog() {
   const catalog = document.querySelector(".rt-catalog");
-  const redirect = document.querySelector("[data-catalog-redirect]");
-  if (redirect) {
-    location.replace(redirect.href);
-    return;
-  }
-  if (!catalog) return;
-  const cards = [...catalog.querySelectorAll("[data-mod-card]")];
-  const query = catalog.querySelector("#mod-search");
-  const category = catalog.querySelector("#mod-category");
-  const dependency = catalog.querySelector("#mod-dependency");
-  const count = catalog.querySelector("#mod-count");
-  const empty = catalog.querySelector(".rt-catalog-empty");
-  const dialog = catalog.querySelector("#mod-dialog");
-  const content = dialog.querySelector(".rt-dialog-content");
-  let opener;
-
-  const filter = () => {
-    let visible = 0;
-    for (const card of cards) {
-      card.hidden = !matchesMod(card.dataset, query.value, category.value, dependency.value);
-      if (!card.hidden) visible++;
+  if (catalog) {
+    // Preserve previously shared dialogue links after moving to real pages.
+    const legacy = location.hash.match(/^#mod-(core|body|themes)$/);
+    if (legacy) {
+      location.replace(new URL(`mods/${legacy[1]}.html`, location.href));
+      return;
     }
-    count.textContent = visible + (visible === 1 ? " mod" : " mods");
-    empty.hidden = visible !== 0;
-  };
-  catalog.querySelector("form").addEventListener("submit", event => event.preventDefault());
-  query.addEventListener("input", filter);
-  category.addEventListener("change", filter);
-  dependency.addEventListener("change", filter);
-
-  const open = id => {
-    const template = catalog.querySelector("#mod-" + id);
-    if (!(template instanceof HTMLTemplateElement)) return;
-    content.replaceChildren(template.content.cloneNode(true));
-    if (!dialog.open) dialog.showModal();
-    dialog.scrollTop = 0;
-    dialog.querySelector("[data-close-mod]").focus({ preventScroll: true });
-  };
-  const route = () => {
-    const match = location.hash.match(/^#mod-(core|body|themes)$/);
-    if (match) open(match[1]);
-    else if (dialog.open) dialog.close();
-  };
-  catalog.addEventListener("click", event => {
-    const target = event.target.closest("button");
-    if (!target) return;
-    if (target.hasAttribute("data-open-mod")) {
-      if (!dialog.open) opener = target;
-      const id = target.dataset.openMod;
-      if (location.hash === "#mod-" + id) open(id);
-      else location.hash = "mod-" + id;
+    const cards = [...catalog.querySelectorAll("[data-mod-card]")];
+    const query = catalog.querySelector("#mod-search");
+    const category = catalog.querySelector("#mod-category");
+    const dependency = catalog.querySelector("#mod-dependency");
+    const controls = { q: query, category, dependency };
+    const filter = () => {
+      let visible = 0;
+      for (const card of cards) {
+        card.hidden = !matchesMod(card.dataset, query.value, category.value, dependency.value);
+        if (!card.hidden) visible++;
+      }
+      catalog.querySelector("#mod-count").textContent = visible + (visible === 1 ? " mod" : " mods");
+      catalog.querySelector(".rt-catalog-empty").hidden = visible !== 0;
+      catalog.querySelectorAll("[data-mod-group]").forEach(group => {
+        group.hidden = !group.querySelector("[data-mod-card]:not([hidden])");
+      });
+      const url = new URL(location.href);
+      for (const [key, control] of Object.entries(controls)) {
+        if (control.value) url.searchParams.set(key, control.value);
+        else url.searchParams.delete(key);
+      }
+      history.replaceState(null, "", url);
+      // Carry catalogue filters through dependency pages without local storage.
+      for (const link of catalog.querySelectorAll("[data-mod-link]")) {
+        const target = new URL(link.href);
+        target.search = url.search;
+        link.href = target.href;
+      }
+    };
+    const params = new URLSearchParams(location.search);
+    for (const [key, control] of Object.entries(controls)) {
+      control.value = params.get(key) || "";
+      control.addEventListener(key === "q" ? "input" : "change", filter);
     }
-    if (target.hasAttribute("data-close-mod")) dialog.close();
-    if (target.hasAttribute("data-reset-filters")) {
+    catalog.querySelector("form").addEventListener("submit", event => event.preventDefault());
+    catalog.querySelector("[data-reset-filters]").addEventListener("click", () => {
       query.value = category.value = dependency.value = "";
       filter();
       query.focus();
-    }
-    if (target.hasAttribute("data-feature")) {
-      const selected = target.dataset.feature;
-      dialog.querySelectorAll("[data-feature]").forEach(button =>
-        button.setAttribute("aria-pressed", String(button.dataset.feature === selected)));
-      dialog.querySelectorAll("[data-feature-copy]").forEach(copy =>
-        copy.hidden = copy.dataset.featureCopy !== selected);
-    }
-    if (target.hasAttribute("data-install-mod")) {
-      const panel = dialog.querySelector(".rt-install-panel");
-      panel.hidden = false;
-      panel.scrollIntoView({ behavior: "instant", block: "nearest" });
-    }
+    });
+    window.addEventListener("pageshow", filter);
+    filter();
+  }
+
+  const page = document.querySelector(".rt-mod-page");
+  if (!page) return;
+  const context = new URLSearchParams();
+  const params = new URLSearchParams(location.search);
+  for (const key of ["q", "category", "dependency"]) {
+    if (params.get(key)) context.set(key, params.get(key));
+  }
+  for (const link of page.querySelectorAll("[data-catalog-back], [data-mod-link]")) {
+    const url = new URL(link.href);
+    url.search = context.toString();
+    link.href = url.href;
+  }
+  page.addEventListener("click", event => {
+    const button = event.target.closest("[data-feature]");
+    if (!button) return;
+    page.querySelectorAll("[data-feature]").forEach(item =>
+      item.setAttribute("aria-pressed", String(item.dataset.feature === button.dataset.feature)));
+    page.querySelectorAll("[data-feature-copy]").forEach(copy =>
+      copy.hidden = copy.dataset.featureCopy !== button.dataset.feature);
   });
-  dialog.addEventListener("click", event => {
-    if (event.target === dialog) {
-      const bounds = dialog.getBoundingClientRect();
-      if (event.clientX < bounds.left || event.clientX > bounds.right ||
-          event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
-    }
-  });
-  dialog.addEventListener("close", () => {
-    if (location.hash.startsWith("#mod-")) history.replaceState(null, "", location.pathname + location.search);
-    if (opener?.isConnected) opener.focus({ preventScroll: true });
-  });
-  window.addEventListener("hashchange", route);
-  route();
 }

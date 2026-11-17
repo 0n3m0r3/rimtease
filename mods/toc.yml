@@ -1,6 +1,12 @@
 - name: Mod catalogue
   href: ../index.md
-- name: RimTease Body
+- name: BDSM
+  href: bdsm.md
+- name: Extended Positions
+  href: positions.md
+- name: RimTease
+  href: core.md
+- name: Body
   href: body.md
-- name: RimTease Themes
+- name: Themes
   href: themes.md

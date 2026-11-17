@@ -28,7 +28,8 @@ class Page(HTMLParser):
 
 def check():
     pages = {p.resolve(): Page(p.read_text()) for p in SITE.rglob("*.html")}
-    required = ("index.html", "mods/body.html", "mods/themes.html", "docs/index.html",
+    required = ("index.html", "mods/core.html", "mods/body.html", "mods/themes.html",
+                "mods/bdsm.html", "mods/positions.html", "docs/index.html",
                 "docs/visuals/index.html", "docs/visuals/body.html",
                 "docs/visuals/health-display.html", "docs/visuals/themes.html")
     errors = [f"Missing page: {name}" for name in required if (SITE / name) not in pages]

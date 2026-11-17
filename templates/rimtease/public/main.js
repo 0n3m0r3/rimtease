@@ -3,7 +3,7 @@ import { initCatalog } from "./catalog.js";
 export default {
   defaultTheme: "dark",
   showLightbox(image) {
-    return !image.closest(".rt-catalog, a") && image.naturalWidth > 200 && image.naturalHeight > 200;
+    return !image.closest(".rt-catalog, .rt-mod-page, a") && image.naturalWidth > 200 && image.naturalHeight > 200;
   },
   start() {
     initCatalog();

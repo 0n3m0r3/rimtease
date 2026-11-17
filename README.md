@@ -1,6 +1,6 @@
 # RimTease — Mods & documentation
 
-The English catalogue and player documentation for RimTease. The preview contains the mod catalogue, Body and Themes overviews, the documentation home, visual requirements grouped by mod, shared documentation resources and the Health Display brief.
+The English catalogue and player documentation for RimTease. The preview contains a five-mod demonstration catalogue, individual mod pages, the documentation home, visual requirements grouped by mod, shared documentation resources and the Health Display brief.
 
 The site uses [DocFX](https://dotnet.github.io/docfx/) 2.81.0 with a custom theme. It requires no game installation or backend. The game projects and [RimWeave API documentation](https://0n3m0r3.github.io/rimweave-docs/) remain separate.
 
@@ -20,16 +20,20 @@ Open <http://localhost:8093/rimtease/>. Keep the terminal running and stop the s
 
 ## Content and maintenance
 
-- `index.md` owns the catalogue; `mods/` owns the detailed Body and Themes descriptions.
+- `index.md` owns the catalogue; `mods/` owns the individual mod pages.
 - `docs/` owns player guidance and contribution briefs, organized by mod and category.
 - `toc.yml` files define navigation; `templates/rimtease/` owns the presentation.
 - `tools/` owns the static build, publication checks and local preview.
 
-The home page is a searchable mod catalogue. Illustrated mod details open in place, with dependencies and a demonstration install order. A single catalogue banner identifies mock images and unavailable downloads. The demo dependency graph is Body → RimWeave; Themes → RimWeave + Body; RimTease → RimWeave + Body, with Themes optional. These are demonstration choices, not a released package manifest. Keep player copy short and put contribution briefs under For creators.
+The searchable catalogue leads with gameplay additions, followed by the shared foundations. Each mod has a real page with its own URL, illustrated features, required mods and an installation preview. Search and filters survive navigation through mod and dependency pages. Previously shared `#mod-core`, `#mod-body` and `#mod-themes` links redirect to the corresponding pages.
+
+Illustrated covers follow the header's inked, cel-shaded frontier style, with subjects tied to each mod: rope, leather cuffs and a crop for BDSM, a Kamasutra for Extended Positions, a mammary and reproductive anatomy atlas for Body, and underwear, fabrics and furniture finishes for Themes. Four original raster illustrations live in `images/cover-*.png`; the RimTease cover reuses `images/colony-evening.png`. Every cover and the catalogue banner share the transparent `images/rimtease-wordmark.png` logo. The cover name remains HTML text so it stays readable at small sizes. Artwork and wordmark are separate reusable assets; gameplay mock-ups belong inside mod pages. The BDSM equipment room and Extended Positions bedroom have separate images in `images/bdsm-gameplay.png` and `images/positions-gameplay.png`, matching the existing top-down colony illustrations. These scenes illustrate the concepts, not implemented game features. All four covers use the banner as their shared reference, preserving bold black outlines, flat cel shading, matte surfaces and a restrained palette. Body and Themes also have matching top-down scenes in `images/body-gameplay.png` and `images/themes-gameplay.png`. Body illustrates extended anatomy through medical diagrams; Themes compares silhouettes, underwear and room palettes. The furniture variants are an illustration idea, not an approved gameplay scope. This visual identity remains a proposal under review, not a published participation standard.
+
+A demo banner identifies illustrative images, example dependencies and unavailable downloads. The existing demo graph is Body → RimWeave; Themes → RimWeave + Body; RimTease → RimWeave + Body, with Themes optional. Two additional concepts illustrate nested dependencies: BDSM → Extended Positions → RimTease + Body. Both concepts show Themes as optional. The BDSM page distinguishes direct requirements from inherited requirements and provides an expandable dependency tree. Installation previews list each required mod once. These are demonstration choices, not released package manifests or verified load orders. Keep player copy short and put contribution briefs under For creators.
 
 When a feature changes, update its catalogue description and relevant guide or visual brief together. Describe planned, available and verified behaviour separately. A feature's release, dependency or compatibility claim needs evidence from that mod's actual version.
 
-The build versions asset directories by content so returning visitors receive updated styles, scripts and images. Run `python3 -m unittest discover -s tools -p "test_*.py"` to check URL stability and invalidation between publications.
+The build versions asset directories by content so returning visitors receive updated styles, scripts and images. The search index travels with its worker in the versioned directory, so content-only changes also invalidate cached search data. Run `python3 -m unittest discover -s tools -p "test_*.py"` to check URL stability and invalidation between publications.
 
 The build treats warnings as errors, checks internal links and anchors, requires every listed content page in search, and rejects private references and game binaries from the generated site. The pinned search adapter fails explicitly when an upstream asset changes. Browser review additionally covers navigation, search, keyboard interaction, mobile layout and theme contrast.
 

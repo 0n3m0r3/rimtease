@@ -5,6 +5,14 @@ from pathlib import Path
 import re
 
 
+def version_search_index(root: Path, worker: str):
+    # The worker and its index share one content-versioned directory. A new
+    # publication cannot reuse a cached index.json from an earlier page build.
+    index = root / "_site/index.json"
+    (root / "_site/public/search-index.json").write_bytes(index.read_bytes())
+    return replace_once(worker, 'fetch("../index.json")', 'fetch("./search-index.json")')
+
+
 def replace_once(source, before, after):
     if source.count(before) != 1:
         raise RuntimeError("DocFX search changed; review the search adapter before building.")
@@ -21,6 +29,7 @@ def adapt_search(root: Path):
     ui_path = public / "search.min.js"
     worker = worker_path.read_text()
     ui = ui_path.read_text()
+    worker = version_search_index(root, worker)
 
     # Reuse DocFX's Lunr instance, index, ranking, cache and result renderer.
     worker = replace_once(worker, "G=i=>e.search(i).map", "G=i=>searchText(w.default,e,i).map")

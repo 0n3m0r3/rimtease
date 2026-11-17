@@ -1,0 +1,24 @@
+---
+title: BDSM
+description: Themed activities and equipment for your colony.
+_layout: landing
+_disableToc: true
+_disableAffix: true
+_disableBreadcrumb: true
+---
+
+<div class="rt-mod-page" data-mod="bdsm">
+<nav class="rt-mod-breadcrumb" aria-label="Breadcrumb"><a href="../index.md#the-mods" data-catalog-back>← All mods</a><span aria-hidden="true">/</span><span>BDSM</span></nav>
+<header class="rt-mod-masthead">
+<div class="rt-page-cover rt-illustrated-cover rt-cover-bdsm">
+<img class="rt-cover-artwork" src="../images/cover-bdsm.png" width="1586" height="992" alt="Black leather wrist cuffs, burgundy rope and a riding crop, drawn with bold outlines and flat shading." fetchpriority="high">
+<span class="rt-cover-brand" aria-hidden="true"><img class="rt-cover-wordmark" src="../images/rimtease-wordmark.png" width="2172" height="724" alt=""><span>Collection</span></span>
+<span class="rt-cover-name" aria-hidden="true">BDSM</span>
+</div>
+<div class="rt-mod-heading"><span class="rt-kicker">RimTease collection · Activities &amp; equipment</span><h1>BDSM</h1><p class="rt-mod-tagline">A different kind of play.</p><p>Explore a themed addition to your colony’s intimate life.</p><div class="rt-page-badges"><span>18+</span><span>Concept mod</span><span>No release yet</span></div><a class="rt-download-button" href="#installation">Installation preview <span aria-hidden="true">↓</span></a></div>
+</header>
+<div class="rt-demo-banner"><strong>Demo catalogue</strong><span>Illustrative images and example dependencies. No downloads yet.</span></div>
+<div class="rt-mod-layout"><section class="rt-mod-overview" aria-labelledby="inside-title"><h2 id="inside-title">Inside the concept</h2><p class="rt-concept-note">An example for exploring the collection. Its name, features and dependencies are illustrative.</p><div class="rt-concept-features"><section><span class="rt-detail-number">01</span><h3>Themed equipment</h3><p>Rope, cuffs and other accessories give this concept its own identity.</p></section><section><span class="rt-detail-number">02</span><h3>A dedicated space</h3><p>The illustration brings equipment and purpose-built furniture into a private colony room.</p></section><section><span class="rt-detail-number">03</span><h3>Build on your collection</h3><p>This example uses Extended Positions, which in turn builds on RimTease and Body.</p></section></div><figure class="rt-game-scene"><img src="../images/bdsm-gameplay.png" width="1536" height="1024" alt="Simulated top-down colony room with unused rope, leather cuffs and a crop on a shelf, a padded bench and an empty wooden support frame." loading="lazy"><figcaption>Themed equipment and furniture · gameplay mock-up</figcaption></figure></section>
+<aside class="rt-requirements" aria-labelledby="requirements-title"><span class="rt-kicker">Before you play</span><h2 id="requirements-title">Required mods</h2><p class="rt-requirements-intro">Install these alongside BDSM.</p><ul class="rt-requirement-list"><li><a href="positions.md" data-mod-link>Extended Positions</a><span>Additional activity choices.</span></li></ul><div class="rt-inherited"><h3>Also needed</h3><p>Required by the mods above.</p><ul><li><a href="core.md" data-mod-link>RimTease</a></li><li><a href="body.md" data-mod-link>Body</a></li><li><a href="https://0n3m0r3.github.io/rimweave-docs/">RimWeave <span aria-hidden="true">↗</span></a></li></ul></div><details class="rt-dependency-tree"><summary>How they fit together</summary><ul><li><a href="positions.md" data-mod-link>Extended Positions</a><ul><li><a href="core.md" data-mod-link>RimTease</a><ul><li><a href="body.md" data-mod-link>Body</a></li><li><a href="https://0n3m0r3.github.io/rimweave-docs/">RimWeave <span aria-hidden="true">↗</span></a></li></ul></li><li><a href="body.md" data-mod-link>Body</a><ul><li><a href="https://0n3m0r3.github.io/rimweave-docs/">RimWeave <span aria-hidden="true">↗</span></a></li></ul></li></ul></li></ul></details><div class="rt-optional"><h3>Optional</h3><p><a href="themes.md" data-mod-link>Themes</a> adds visual choices.</p></div><details class="rt-install-panel"><summary>View installation preview</summary><p class="rt-install-note" id="installation">Example for RimWorld 1.7. Downloads are unavailable; this is not a verified load order.</p><ol><li>RimWorld 1.7</li><li><a href="https://0n3m0r3.github.io/rimweave-docs/">RimWeave <span aria-hidden="true">↗</span></a></li><li><a href="body.md" data-mod-link>Body</a></li><li><a href="core.md" data-mod-link>RimTease</a></li><li><a href="positions.md" data-mod-link>Extended Positions</a></li><li><a href="bdsm.md" data-mod-link>BDSM</a></li></ol><div class="rt-install-actions"><button type="button" disabled>Steam Workshop</button><button type="button" disabled>Download ZIP</button></div></details></aside></div>
+<nav class="rt-page-footer" aria-label="Mod navigation"><a href="../index.md#the-mods" data-catalog-back>← Back to the collection</a></nav>
+</div>
